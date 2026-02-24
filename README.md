@@ -63,7 +63,7 @@ pdm install
 
 
 ___
-How to install WSL (2.1.5.0)
+## How to install WSL (2.1.5.0)
 
 1. Download WSL (2.1.5.0) from the Microsoft website or click [here](https://github.com/microsoft/WSL/releases/download/2.1.5/wsl.2.1.5.0.x64.msi?utm_source=chatgpt.com)
 

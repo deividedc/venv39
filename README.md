@@ -69,9 +69,9 @@ ___
 
 2. Open PowerShell as administrator and run:
 
-``bash
+```bash
 cd "C:\Users\YOUR_USERNAME\Downloads"
-``
+```
 
 ```bash
 msiexec /i wsl.2.1.5.0.x64.msi

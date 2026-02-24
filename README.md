@@ -62,5 +62,20 @@ pdm install
 ```
 
 
+___
+How to install WSL (2.1.5.0)
 
+1. Download WSL (2.1.5.0) from the Microsoft website or click [here](https://github.com/microsoft/WSL/releases/download/2.1.5/wsl.2.1.5.0.x64.msi?utm_source=chatgpt.com)
+
+2. Open PowerShell as administrator and run:
+
+``bash
+cd "C:\Users\YOUR_USERNAME\Downloads"
+``
+
+```bash
+msiexec /i wsl.2.1.5.0.x64.msi
+```
+3. Open WSL and run the previous step.
+   
 

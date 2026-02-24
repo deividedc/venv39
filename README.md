@@ -3,7 +3,7 @@
 A virtual environment configured to run a set of 5 AutoMLs: LFAML, TPOT, AutoGluon, H2O, and AutoKeras.
 
 ## Requirements
-- Linux or WSL
+- Linux or WSL (2.1.5.0)
 - openjdk version "17.0.x"
 - Python 3.9
 - flaml==2.3.4

@@ -51,5 +51,3 @@ pdm install
 ```
 
 
-➡️ [Guia de Autostart](SETUP_AUTOSTART.md)
-

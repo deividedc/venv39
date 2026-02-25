@@ -1,15 +1,10 @@
 # venv39
 
-A virtual environment configured to run a set of 4 AutoMLs: LFAML, TPOT, AutoGluon, H2O, and AutoKeras.
+A virtual environment configured to run a set of 4 AutoMLs: LFAML, TPOT, AutoGluon and H2O.
 
 ## Requirements
 - Linux or WSL (2.1.5.0)
 - openjdk version "17.0.x"
-- Python 3.9
-- FLAML 2.3.4
-- TPOT 0.12.2
-- AutoGluon 1.2
-- H2O 3.46.0.7
 
 ____
 
@@ -26,30 +21,34 @@ sudo apt install openjdk-17-jre -y
 ```
 
 3. Install Python 3.9
-
 ```bash
 sudo apt install python3.9 python3.9-venv python3.9-dev -y
 ```
-4. Intall PDM global
-```bash
-sudo apt update
-sudo apt install pdm -y
-```
 
-5. Create a virtual environment with Python 3.9
+4. Create a virtual environment with Python 3.9
 ```bash
 python3.9 -m venv ~/env39
 ```
 
-5. Update pip
+5. Open the virtual environment
+```bash
+source env39/bin/activate
+```
+
+6. Update pip
 ```bash
 pip install --update pip
 ```
 
-6. Install PDM in the venv
+7. Install PDM in the venv
 ```bash
 pip install pdm
 ```
+   7.1. If you are unable to install in the virtual environment, install the global PDM and repeat step 7.
+   ```bash
+   sudo apt update
+   sudo apt install pdm -y
+   ```
 
 8. Navigate to the venv39 folder with the virtual environment active
 
@@ -76,6 +75,6 @@ cd "C:\Users\YOUR_USERNAME\Downloads"
 msiexec /i wsl.2.1.5.0.x64.msi
 ```
 
-5. Open WSL and run the previous step.
+5. Open WSL and run the [instructions for use](## Instructions for use in Linux or WSL).
    
 

@@ -13,7 +13,7 @@ A virtual environment configured to run a set of 4 AutoMLs: LFAML, TPOT, AutoGlu
 
 ____
 
-## Instructions for use
+## Instructions for use in Linux or WSL
 
 1. Clone the repository and install the requirements:
 ```bash
@@ -27,7 +27,6 @@ sudo apt install openjdk-17-jre -y
 
 3. Install Python 3.9
 
-For Linux or WSL
 ```bash
 sudo apt install python3.9 python3.9-venv python3.9-dev -y
 ```

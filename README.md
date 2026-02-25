@@ -1,6 +1,6 @@
 # venv39
 
-A virtual environment configured to run a set of 4 AutoMLs: LFAML, TPOT, AutoGluon and H2O.
+A virtual environment configured to run a set of 4 AutoMLs: FLAML, TPOT, AutoGluon and H2O.
 
 ## Requirements
 - Linux or WSL (2.1.5.0)

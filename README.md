@@ -75,6 +75,6 @@ cd "C:\Users\YOUR_USERNAME\Downloads"
 msiexec /i wsl.2.1.5.0.x64.msi
 ```
 
-5. Open WSL and run the [instructions for use](##Instructions-for-use-in-Linux-or-WSL).
+5. Open WSL and run the [instructions for use](https://github.com/deividedc/venv39/edit/main/README.md#instructions-for-use-in-linux-or-wsl).
    
 

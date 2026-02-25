@@ -3,7 +3,7 @@
 A virtual environment configured to run a set of 4 AutoMLs: FLAML, TPOT, AutoGluon and H2O.
 
 ## Requirements
-- Linux or WSL (2.1.5.0)
+- Linux or [WSL (2.1.5.0)](#How-to-install-WSL-(2.1.5.0))
 - openjdk version "17.0.x"
 
 ____

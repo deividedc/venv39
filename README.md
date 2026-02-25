@@ -1,6 +1,6 @@
 # venv39
 
-A virtual environment configured to run a set of 5 AutoMLs: LFAML, TPOT, AutoGluon, H2O, and AutoKeras.
+A virtual environment configured to run a set of 4 AutoMLs: LFAML, TPOT, AutoGluon, H2O, and AutoKeras.
 
 ## Requirements
 - Linux or WSL (2.1.5.0)
@@ -10,9 +10,7 @@ A virtual environment configured to run a set of 5 AutoMLs: LFAML, TPOT, AutoGlu
 - tpot==0.12.2
 - autogluon==1.2
 - h2o==3.46.0.7
-- autokeras==1.0.16
-- keras-tuner==1.0.4
-- numpy==1.23
+
 ____
 
 ## Instructions for use

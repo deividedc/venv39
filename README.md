@@ -64,15 +64,18 @@ ___
 
 1. Download WSL (2.1.5.0) from the Microsoft website or click [here](https://github.com/microsoft/WSL/releases/download/2.1.5/wsl.2.1.5.0.x64.msi?utm_source=chatgpt.com)
 
-2. Open PowerShell as administrator and run:
+2. Open PowerShell as administrator.
 
+3. Navigate to the file download location
 ```bash
 cd "C:\Users\YOUR_USERNAME\Downloads"
 ```
 
+4. Run
 ```bash
 msiexec /i wsl.2.1.5.0.x64.msi
 ```
-3. Open WSL and run the previous step.
+
+5. Open WSL and run the previous step.
    
 

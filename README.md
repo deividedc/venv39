@@ -6,10 +6,10 @@ A virtual environment configured to run a set of 4 AutoMLs: LFAML, TPOT, AutoGlu
 - Linux or WSL (2.1.5.0)
 - openjdk version "17.0.x"
 - Python 3.9
-- flaml==2.3.4
-- tpot==0.12.2
-- autogluon==1.2
-- h2o==3.46.0.7
+- FLAML 2.3.4
+- TPOT 0.12.2
+- AutoGluon 1.2
+- H2O 3.46.0.7
 
 ____
 

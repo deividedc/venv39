@@ -301,4 +301,110 @@ h2o.init()
 print("H2O funcionando")
 ```
 
-O processo deve finalizar normalmente.
+---
+
+# Caso o problema persista após o reboot
+
+Se após reiniciar o computador o endereço:
+
+```
+
+54.232.189.113/32
+
+````
+
+voltar a aparecer na interface de loopback:
+
+```bash
+ip addr show lo
+````
+
+é necessário verificar o software **Warsaw Desktop**, que foi identificado como o responsável pela criação desse alias de IP.
+
+O Warsaw Desktop é um software de segurança utilizado por alguns bancos brasileiros para funcionamento de serviços como o **Guardião Itaú 30 horas** e outras plataformas de internet banking. A remoção desse software pode impedir o acesso a determinados serviços bancários que dependem dele.
+
+A origem do endereço foi identificada através de:
+
+```bash
+sudo grep -R "54.232.189" /etc /usr/local /opt 2>/dev/null
+```
+
+Resultado encontrado:
+
+```
+/usr/local/etc/warsaw/.lo_alias_ip:54.232.189.113
+```
+
+O arquivo:
+
+```
+/usr/local/etc/warsaw/.lo_alias_ip
+```
+
+era utilizado pelo Warsaw para adicionar o endereço:
+
+```
+54.232.189.113/32
+```
+
+na interface:
+
+```
+lo
+```
+
+Esse comportamento interfere na descoberta automática de rede do H2O, fazendo com que o framework detecte um nó adicional inexistente.
+
+## Opção 1 - manter o Warsaw instalado
+
+Caso o acesso aos bancos seja necessário, recomenda-se manter o Warsaw instalado e iniciar o H2O especificando explicitamente o endereço local:
+
+```bash
+java -jar h2o.jar \
+-ip 127.0.0.1 \
+-web_ip 127.0.0.1 \
+-port 54321
+```
+
+ou configurar o ambiente Python para utilizar somente o loopback local.
+
+---
+
+## Opção 2 - remover o Warsaw Desktop
+
+Caso o computador não utilize serviços bancários que dependem do Warsaw, o software pode ser removido:
+
+```bash
+sudo systemctl stop warsaw
+sudo systemctl disable warsaw
+
+sudo apt remove --purge warsaw
+sudo apt autoremove
+```
+
+Após a remoção:
+
+```bash
+sudo reboot
+```
+
+Verificar novamente:
+
+```bash
+ip addr show lo
+```
+
+O resultado esperado é:
+
+```
+inet 127.0.0.1/8 scope host lo
+inet6 ::1/128 scope host
+```
+
+Sem o endereço:
+
+```
+54.232.189.113/32
+```
+
+
